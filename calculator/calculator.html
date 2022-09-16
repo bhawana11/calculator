@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator</title>
+    <script src="calculator.js"></script>
+</head>
+<body>
+    <form id="form1">
+        <table width="40%" style="margin-left: auto;margin-right: auto;background-color: grey;" cellspacing=0 cellpadding=0>
+            <tr>
+                <td colspan="3">
+                    <input type="text" id="txtDisplay" style="text-align: right;width: 98.7%;height: 40px;font-size: 30px;" onkeypress="return checkNum(event);">
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 25%;">
+                   <table width="70%">
+                        <tr>
+                            <td>
+                                <input type="button" id="b1" value="     1    " onclick="return calculate('1');">
+                            </td>
+                            <td>
+                                <input type="button" id="b2" value="     2    " onclick="return calculate('2');">
+                            </td>
+                            <td>
+                                <input type="button" id="b3" value="     3    " onclick="return calculate('3');">
+                            </td>
+                            <td>
+                                <input type="button" id="b4" value="     4    " onclick="return calculate('4');">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" id="b5" value="     5    " onclick="return calculate('5');">
+                            </td>
+                            <td>
+                                <input type="button" id="b6" value="     6    " onclick="return calculate('6');">
+                            </td>
+                            <td>
+                                <input type="button" id="b7" value="     7    " onclick="return calculate('7');">
+                            </td>
+                            <td>
+                                <input type="button" id="b8" value="     8    " onclick="return calculate('8');">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" id="b5" value="     9    " onclick="return calculate('9');">
+                            </td>
+                            <td>
+                                <input type="button" id="b6" value="     0    " onclick="return calculate('0');">
+                            </td>
+                            <td>
+                                <input type="button" id="b7" value="     .    " onclick="return calculate('.');">
+                            </td>
+                            <td>
+                                <input type="button" id="b8" value="   CLS " onclick="return clearData();">
+                            </td>
+                        </tr>
+                   </table>
+                </td>
+                <td style="width: 15%;">
+                    <table width="70%">
+                        <tr>
+                            <td>
+                                <input type="button" id="bPlus" value="     +    " onclick="return operator('+');">
+                            </td>
+                            <td>
+                                <input type="button" id="bPlus" value="     -    " onclick="return operator('-');">
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" id="bPlus" value="     *    "onclick="return operator('*');">
+                            </td>
+                            <td>
+                                <input type="button" id="bPlus" value="     /    " onclick="return operator('/');">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" id="btnFact" value="     !    " onclick="factorial();"/>
+                            </td>
+                            <td>
+                                <input type="button" id="btnDel" value="  DEL " style="background-color: red;" onclick="return back();"/>
+                            </td> 
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" id="btnSqrt" value="  &#8730; " onclick="squareRoot();" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan=2 style="text-align:center">
+                                <input type="button"  id="btnEqual" value="     =    " onclick="return equal();">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
